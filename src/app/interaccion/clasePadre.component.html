@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <h1 class="bg-dark text-white">
+  {{ titulo }}
+  </h1>
+  <div class="row w-100">
+
+      <h2>{{profesor}} controla {{alumnosClase.length}} alumnos</h2>
+      <div class="w-100 border boder-info mb-4 pb-3">
+          <h3>Aprobados: {{alumnosAprobados}}, Suspendidos: {{alumnosSuspendidos}}</h3>
+          <claseHija *ngFor="let alumn of alumnosClase"
+                     [alumno]="alumn"
+                     [profesor]="profesor"
+                     (darNota)="calcularAprobados($event)"
+                  >
+          </claseHija>
+      </div>
+  </div>

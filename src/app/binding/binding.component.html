@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <h1 class="bg-dark text-white">
+  {{ titulo }}
+  </h1>
+  <div class="row w-100">
+      <div class="col-12 border boder-info mb-4 pb-3">
+          <h2>Este es un ejemplo de binding simple</h2>
+          <p>Este botón sive para mostrar un div oculto</p>
+          <button class="btn btn-primary" (click)="toggleDiv()" >Toogle DIV</button>
+          <div bind-hidden="esInvisible" bind-id="prueba">
+              <div class="col">
+                  ESTE TEXTO ESTABA OCULTO
+              </div>
+          </div>
+      </div>
+
+      <div class="col-12 border boder-info mb-4 pb-3">
+          <p>{{ tituloPrueba }}</p>
+          <button class="btn btn-primary" (click)="cambiarTitulo('HAS SUPERADO LA PRIMERA PARTE DEL CURSO')" >Cambiar titulo</button>
+      </div>
+
+
+      <div class="col-12 border boder-info mb-4 pb-3" [style.color]="colorComponente">
+          EL COLOR DEL TEXTO ME LO HA DADO EL COMPONENTE
+      </div>
+      <div class="col-12 border boder-info mb-4 pb-3">
+          <input class="w-50" [attr.value]="valorInput"/>
+      </div>
+
+      <div class="col-12 border boder-info mb-4 pb-3" [class.bg-success]="mostrarClase">
+         SI HABILITAS LA CLASE ME VEO VERDE.
+      </div>
+
+      <div class="col-12 border boder-info mb-4 pb-3">
+          <button class="btn btn-primary" [style.color]="esBotonEspecial ? 'red' : 'green'">MI COLOR CAMBIA CON LA EXPRESIÓN</button>
+      </div>
+
+      <div class="col-12 border border-info mb-4 pb-3">
+          <label>INTRODUCE EL NOMBRE DEL PERSONAJE</label>
+          <input value="" (input)="nombrePersonaje=$event.target.value"/>
+          <span class="bg-primary">AQUI APARECE EL NOMBRE DE MI PERSONAJE:{{nombrePersonaje}}</span>
+      </div>
+
+      <div class="col-12 border border-info mb-4 pb-3">
+          <h2>Two-way data bindind Angular 2</h2>
+          <label>Profesion del personaje</label>
+          <input type="text" [(ngModel)] = "persona.profesion" />
+          <p>Mostrar profesion: {{persona.profesion}}</p>
+      </div>
+  </div>

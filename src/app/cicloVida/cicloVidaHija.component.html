@@ -1,0 +1,22 @@
+<div class="bg-warning">
+    <h2>
+       CICLO VIDA HIJO:
+    </h2>
+    <ul>
+        <li *ngFor="let paso of pasosCicloVida">
+            {{paso}}
+        </li>
+    </ul>
+</div>
+<div class="bg-primary">
+    <h3><span class="bg-success">{{videojuego.nombre}}</span> tiene los siguientes personajes:</h3>
+    <ul>
+        <li  *ngFor="let personaje of videojuego.personajes">
+            <span class="bg-danger">{{personaje.nombre}}</span>
+
+            <h4>CAMBIOS PRODUCIDOS</h4>
+            <div *ngFor="let cambio of cambios">{{cambio}}</div>
+
+        </li>
+    </ul>
+</div>

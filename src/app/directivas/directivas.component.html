@@ -1,0 +1,64 @@
+<h1 class="bg-dark text-white">
+  {{ titulo }}!
+</h1>
+<div class="row">
+    <button class="btn btn-primary" (click)="estaDivActivo = estaDivActivo?false:true">TOGGLE DIV</button>
+    <div *ngIf="estaDivActivo" class="col-12">
+        ESTE ES EL TEXTO CON LA DIRECTIVA ngIF.
+    </div>
+</div>
+
+<h1>
+   LISTA DE ALUMNOS
+</h1>
+
+<div *ngFor="let alumno of alumnos;let i = index" class="row">{{alumno.nombre}} y posicion {{i}}</div>
+
+<button class="btn btn-primary" (click)="addAlumno('Prueba')">Incluir Alumno</button>
+
+<h1>Ejemplo de switch</h1>
+<div class="row">
+    <button class="btn btn-primary" (click)="posicion = 1;">Cambia a Posición 1</button>
+    <button class="btn btn-primary" (click)="aposicion = 2">Cambia a Posición 2</button>
+    <button class="btn btn-primary" (click)="posicion = 3">Cambia a Posición 3</button>
+    <button class="btn btn-primary" (click)="posicion = 4">Cambia a Posición 4</button>
+</div>
+
+<div class="row" [ngSwitch]="posicion">
+    <div class="col-12 border boder-info mb-4 pb-3" *ngSwitchCase="1" >PRIMERA POSICION</div>
+    <div class="col-12 border boder-info mb-4 pb-3" *ngSwitchCase="2" >SEGUNDA POSICION</div>
+    <div class="col-12 border boder-info mb-4 pb-3" *ngSwitchCase="3" >TERCERA POSICION</div>
+    <div class="col-12 border boder-info mb-4 pb-3" *ngSwitchDefault  >POSICION DEFECTO</div>
+</div>
+
+<button class="btn btn-primary" (click)="mostrarContainer = mostrarContainer?false:true">TOOGLE CONTAINER</button>
+<ng-container *ngIf="mostrarContainer">
+    <div class="col-12 border boder-info mb-4 pb-3">
+        ESTE DIV NO EXISTE EN EL HTML HASTA QUE SE ACTIVE EL VALOR. PORQUE SE HA USADO NG-CONTAINER.
+    </div>
+</ng-container>
+
+<div class="w-100 border boder-info mb-4 pb-3">
+<h2>Ejemplo de mi Primera Directiva propia</h2>
+
+
+    <p miPrimeraDirectiva>Este es un ejemplo de una directiva</p>
+
+</div>
+
+<div class="w-100 border boder-info mb-4 pb-3" >
+<h2>Ejemplo de mi Segunda Directiva propia</h2>
+
+    <h3>Selecciona un color</h3>
+    <div>
+        <input type="radio" name="colors" (click)="color='lightgreen'" />Verde
+        <input type="radio" name="colors" (click)="color='yellow'" />Amarillo
+        <input type="radio" name="colors" (click)="color='blue'" />Azul
+    </div>
+
+
+<p [miSegundaDirectiva]='"green"' defaultColor="red">Este es un ejemplo de una directiva</p>
+
+</div>
+
+

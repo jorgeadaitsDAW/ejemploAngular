@@ -1,0 +1,6 @@
+<div [class.bg-success]="aprobado" [class.bg-warning]="suspendido">
+    <h3>{{alumno.nombre}} dice:</h3>
+    <p>Yo, <nombreAlumno [nombre]="alumno.nombre"> </nombreAlumno>, recibo clases del profesor, {{nombreProfesor}}.</p>
+    <button (click)="aprobar(true)"  [disabled]="calificado">Aprobado</button>
+    <button (click)="aprobar(false)" [disabled]="calificado">Suspendido</button>
+</div>

@@ -1,0 +1,47 @@
+<h1 class="bg-dark text-white">
+  {{ titulo | uppercase }}
+</h1>
+<div class="row w-100">
+    <span>TEXTO DE EJEMPLO: {{ texto }}</span>
+
+    <ul>
+        <li>
+            EJEMPLO SIMPLE DE PIPE: <span class="bg-info">{{ texto | uppercase }}</span>
+        </li>
+        <li>
+            EJEMPLO CON PARAMETROS: <span class="bg-info">{{ texto | slice:0:6 | uppercase }}</span>
+        </li>
+    </ul>
+</div>
+
+<div class="row w-100">
+    <h2> A TODAS LAS NOTRAS SE LES VA A BAJAR UN PUNTO</h2>
+    <ol>
+        <li *ngFor="let nota of notas">
+            {{ nota.asignatura | uppercase }} -> NOTA ANTERIOR: {{ nota.valor}} . LA NOTA ACTUAL ES {{ nota | cambiarNota:inc_dec }}
+        </li>
+    </ol>
+</div>
+
+
+<h2> FILTRO DE NOTAS</h2>
+<button class="btn btn-primary" (click)="addNota('DEC','5')">Incluir Nota</button>
+
+<div class="row w-100">
+    <div class="col-6">
+        <h3> SOLO MUESTRO LAS NOTAS APROBADAS</h3>
+        <ol>
+            <li *ngFor="let nota of ( notas | filtrarNota:true )">
+                HAS APROBADO LA ASIGNATURA: {{ nota.asignatura }}
+            </li>
+        </ol>
+    </div>
+    <div class="col-6">
+        <h3> SOLO MUESTRO LAS NOTAS SUSPENDIDAS</h3>
+        <ol>
+            <li *ngFor="let nota of ( notas | filtrarNota:false )">
+                HAS SUSPENDIDO LA ASIGNATURA: {{ nota.asignatura }}
+            </li>
+        </ol>
+    </div>
+</div>
