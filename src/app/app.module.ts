@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -21,6 +21,15 @@ import { PipeComponent } from './pipe/pipe.component';
 import { CambiarNotaPipe } from './pipe/cambiarNota.pipe';
 import { FiltroNotaPipe } from './pipe/filtroNota.pipe';
 
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormularioBasicoComponent } from './formulario/formularioBasico.component';
+import { FormularioAvanzadoComponent } from './formulario/formularioAVanzado.component';
+
+import { ServiciosComponent } from './servicios/servicios.component';
+import { HttpComponent } from './http/http.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
         AppComponent,
@@ -40,14 +49,24 @@ import { FiltroNotaPipe } from './pipe/filtroNota.pipe';
 
         PipeComponent,
         CambiarNotaPipe,
-        FiltroNotaPipe
+        FiltroNotaPipe,
+
+        FormularioComponent,
+        FormularioBasicoComponent,
+        FormularioAvanzadoComponent,
+        
+        ServiciosComponent,
+
+        HttpComponent
 
   ],
   imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

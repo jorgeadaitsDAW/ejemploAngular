@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active"
+               <a class="list-group-item list-group-item-action active"
                    id="list-binding-list" data-toggle="list" href="#list-binding">Binding</a>
 
                 <a class="list-group-item list-group-item-action"
@@ -21,15 +21,29 @@
                 <a class="list-group-item list-group-item-action"
                    id="list-pipe-list" data-toggle="list" href="#list-pipe">Pipe</a>
 
+                <a class="list-group-item list-group-item-action"
+                   id="list-pipe-list" data-toggle="list" href="#list-formulario">Formularios</a>
+
+                <a class="list-group-item list-group-item-action"
+                   id="list-pipe-list" data-toggle="list" href="#list-servicios">Servicios</a>
+
+                <a class="list-group-item list-group-item-action"
+                   id="list-pipe-list" data-toggle="list" href="#list-http">HTTP</a>
+
             </div>
         </div>
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-binding"><binding></binding></div>
+             <div class="tab-pane fade show active" id="list-binding"><binding></binding></div>
                 <div class="tab-pane fade" id="list-directivas"><directivas></directivas></div>
                 <div class="tab-pane fade" id="list-interaccion"><clasePadre></clasePadre></div>
                 <div class="tab-pane fade" id="list-cicloVida"><cicloVidaPadre></cicloVidaPadre></div>
                 <div class="tab-pane fade" id="list-pipe"><pipe></pipe></div>
+                <div class="tab-pane fade" id="list-formulario"><app-formulario></app-formulario>
+                </div>
+                 <div class="tab-pane fade" id="list-servicios"><app-servicios></app-servicios>
+                 </div>
+                 <div class="tab-pane fade" id="list-http"><app-http></app-http></div>
             </div>
         </div>
     </div>
