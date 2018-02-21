@@ -14,7 +14,7 @@
           </div>
       </div>
 
-      <div class="col-12 border boder-info mb-4 pb-3">
+      <div class="col-12 border boder-info mb-4 pb-3" [class.$claseEjemplo]="true">
           <p>{{ tituloPrueba }}</p>
           <button class="btn btn-primary" (click)="cambiarTitulo('HAS SUPERADO LA PRIMERA PARTE DEL CURSO')" >Cambiar titulo</button>
       </div>
@@ -46,5 +46,12 @@
           <label>Profesion del personaje</label>
           <input type="text" [(ngModel)] = "persona.profesion" />
           <p>Mostrar profesion: {{persona.profesion}}</p>
+      </div>
+
+
+      <div class="col-12 border border-info mb-4 pb-3">
+          <h2>Ejemplo de Jquery</h2>
+          <input id="prueba" value="HOLA ALUMNOS">
+          <button class="btn btn-primary" id="prueba" (click)="mostrarAlerta()">EJEMPLO</button>
       </div>
   </div>

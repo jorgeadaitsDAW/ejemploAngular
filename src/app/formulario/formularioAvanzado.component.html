@@ -1,0 +1,53 @@
+<h1 class="bg-dark text-white">
+   {{ titulo | uppercase}}
+</h1>
+<form [formGroup]="loginForm" #loginFormulario="ngForm">
+    <div class="form-row form-group">
+        <div class="form-group col-6">
+            <label for="login">Login</label>
+            <input type="text"
+                   class="form-control"
+                   id="login"
+                   formControlName="login"
+                   placeholder="Login" 
+                   required>
+          
+        <div *ngIf="login.invalid && (login.dirty || login.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="login.errors.required">
+            Nombre es obligatorio.
+          </div>
+          <div *ngIf="login.errors.minlength">
+            Nombre tiene almenos 4 caracteres.
+          </div>
+           <div *ngIf="login.errors.nombreErroneo">
+            {{ login.errors.nombreErroneo.mensaje }}
+          </div>
+        </div> 
+
+        </div>
+        <div class="form-group col-6">
+            <label for="passwordLogin">Contraseña:</label>
+            <input type="password"
+                   id="passwordLogin"
+                   class="form-control"
+                    formControlName="passwordLogin"
+                   placeholder="Password" required>
+
+        <div *ngIf="passwordLogin.invalid && (passwordLogin.dirty || passwordLogin.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="passwordLogin.errors.required">
+            Password es obligatorio.
+          </div>
+          <div *ngIf="passwordLogin.errors.pattern">
+             EL password debe ser 6 letras.
+          </div>
+        </div> 
+
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Registrarse</button>
+</form>

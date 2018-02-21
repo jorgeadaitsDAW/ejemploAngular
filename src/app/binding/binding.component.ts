@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+declare var $ :any;
+
 @Component({
   selector: 'binding',
   templateUrl: './binding.component.html'
@@ -14,6 +16,7 @@ export class BindingComponent {
     mostrarClase=true;
     esBotonEspecial=true;
     nombrePersonaje= ""
+    claseEjemplo = "bg-primary "
 
     public persona = {id: 1, nombre: "Pepe", profesion: "Bombero"};
 
@@ -30,6 +33,12 @@ export class BindingComponent {
     dameValor(){
         return "EJEMPLO DE DOBLE ASOCIACIÓN";
     }
+
+    mostrarAlerta(){
+        console.log("holaa");
+        alert($("#prueba").val());
+    }
+
 }
 
 

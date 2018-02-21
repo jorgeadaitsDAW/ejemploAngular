@@ -1,0 +1,21 @@
+<h1 class="bg-dark text-white">
+   {{ titulo | uppercase}}
+</h1>
+<ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#formBasico">Formularios Básico</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill"  href="#formAvanzado">Formulario Con Validador</a>
+    </li>
+</ul>
+
+
+<div class="tab-content" >
+  <div class="tab-pane fade show active" id="formBasico">
+     <formularioBasico></formularioBasico>
+  </div>
+  <div class="tab-pane fade" id="formAvanzado">
+    <formularioAvanzado></formularioAvanzado>
+  </div>
+</div>

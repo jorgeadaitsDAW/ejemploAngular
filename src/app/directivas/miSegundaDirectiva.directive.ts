@@ -6,7 +6,7 @@ import { Directive,ElementRef,HostListener, Input} from '@angular/core';
 
 export class miSegundaClaseDirectiva {
 
-    @Input() defaultColor: string;
+    @Input() pepito: string;
     @Input('miSegundaDirectiva') colorAsignado:String
 
 
@@ -15,7 +15,7 @@ export class miSegundaClaseDirectiva {
     }
 
     @HostListener('mouseenter') alEntraElRaton() {
-        this.el.nativeElement.style.backgroundColor =  this.colorAsignado || this.defaultColor;
+        this.el.nativeElement.style.backgroundColor =  this.colorAsignado || this.pepito;
     }
 
     @HostListener('mouseleave') alSalirElRaton() {

@@ -1,0 +1,102 @@
+<h1 class="bg-dark text-white">
+   {{ titulo | uppercase}}
+</h1>
+<p>AQUI indicamos el valor del modelo: {{ diagnostico }}</p>
+<form #usuarioForm="ngForm">
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="nombre">Nombre</label>
+            <input type="text"
+                   class="form-control"
+                   id="nombre"
+                   [(ngModel)]="usuario.nombre"  
+                   name="nombre"
+                   #nombre="ngModel"
+                   #spy
+                   placeholder="Nombre" 
+                   required>
+            <span>Clases de estado del input => {{ spy.className }}</span>
+            <div [hidden]="nombre.valid || nombre.pristine"
+                  class="alert alert-danger">
+                EL nombre es obligatorio
+            </div>      
+        </div>
+        <div class="form-group col-6">
+            <label for="inputEmail">Email</label>
+            <input type="email"
+                   class="form-control"
+                   id="inputEmail"
+                   [(ngModel)]="usuario.email"  name="email"
+                   #email
+                   placeholder="Email" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="password">Contraseña:</label>
+            <input type="password"
+                   id="password"
+                   class="form-control"
+                   [(ngModel)]="usuario.password" name="password"
+                   #password
+                   placeholder="Password" required>
+        </div>
+        <div class="form-group col-6">
+            <label for="passwordConfirm">Confirmar Contraseña:</label>
+            <input type="password"
+                   class="form-control"
+                   id="passwordConfirm"
+                   [(ngModel)]="passwordConfirm"  name="passConfirm"
+                   #passwrodConfirm
+                   placeholder="Password"  required>
+        </div>
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-6">
+            <label for="tipoUsuario" class="col-form-label">Tipo Usuario:</label>
+            <select class="custom-select"
+                    id="tipoUsuario"
+                    [(ngModel)]="usuario.tipo" name="tipoUsuario"
+                    #tipoUsuario
+                    required>
+                <option selected></option>
+                <option *ngFor="let tipoUsuario of tiposUsuarios">
+                    {{ tipoUsuario }}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group col-6">
+            <label class="col-form-label">Sexo:</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input type="radio"
+                           id="customRadio1"
+                           name="sexo"
+                           [(ngModel)]="usuario.sexo"
+                           #sexo
+                           class="form-check-input mt-2"
+                           value="HOMBRE" 
+                          required>
+                    <label class="form-check-label" for="customRadio1">Hombre</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio"
+                           id="customRadio2"
+                           name="sexo"
+                           [(ngModel)]="usuario.sexo"
+                           #sexo
+                           class="form-check-input mt-2"
+                           value="MUJER"
+                           required>
+                    <label class="form-check-label" for="customRadio2">Mujer</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Registrarse</button>
+</form>
