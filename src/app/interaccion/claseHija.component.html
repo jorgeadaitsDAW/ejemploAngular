@@ -3,4 +3,9 @@
     <p>Yo, <nombreAlumno [nombre]="alumno.nombre"> </nombreAlumno>, recibo clases del profesor, {{nombreProfesor}}.</p>
     <button (click)="aprobar(true)"  [disabled]="calificado">Aprobado</button>
     <button (click)="aprobar(false)" [disabled]="calificado">Suspendido</button>
+
+
+    <button (click)="cambiarNombreEnPadre(alumno.nombre)">BOTON CAMBIAR NOMBRE </button>
+
+
 </div>

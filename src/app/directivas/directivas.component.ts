@@ -14,6 +14,7 @@ export class DirectivasComponent {
     mostrarContainer = false;
     color = "";
     mostrarDiv = false;
+    colorFondoBoton = 'green';
 
     alumnos = [
         new Alumno(1,'Pedro'),

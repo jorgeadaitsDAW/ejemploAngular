@@ -15,7 +15,8 @@ export class miSegundaClaseDirectiva {
     }
 
     @HostListener('mouseenter') alEntraElRaton() {
-        this.el.nativeElement.style.backgroundColor =  this.colorAsignado || this.pepito;
+        this.el.nativeElement.style.backgroundColor =
+            this.colorAsignado || this.pepito;
     }
 
     @HostListener('mouseleave') alSalirElRaton() {

@@ -18,7 +18,7 @@
     <h2> A TODAS LAS NOTRAS SE LES VA A BAJAR UN PUNTO</h2>
     <ol>
         <li *ngFor="let nota of notas">
-            {{ nota.asignatura | uppercase }} -> NOTA ANTERIOR: {{ nota.valor}} . LA NOTA ACTUAL ES {{ nota | cambiarNota:inc_dec }}
+            {{ nota.asignatura | uppercase }} -> NOTA ANTERIOR: {{ nota.valor}} . LA NOTA ACTUAL ES {{ nota | cambiarNota:1}}
         </li>
     </ol>
 </div>

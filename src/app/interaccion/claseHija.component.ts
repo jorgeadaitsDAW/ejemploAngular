@@ -13,6 +13,8 @@ export class ClaseHijaComponent{
 
 
     @Output() darNota = new EventEmitter<boolean>();
+    @Output() cambiarNombre = new EventEmitter<String>();
+
     calificado = false;
 
     aprobado = false;
@@ -26,6 +28,10 @@ export class ClaseHijaComponent{
         }else {
             this.suspendido = true;
         }
+    }
+
+    cambiarNombreEnPadre(nombre: string){
+        this.cambiarNombre.emit(nombre);
     }
 
 

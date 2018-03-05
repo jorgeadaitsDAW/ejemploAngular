@@ -2,6 +2,7 @@
   <h1 class="bg-dark text-white">
   {{ titulo }}
   </h1>
+    <h2>{{nombreEjercicio}}</h2>
   <div class="row w-100">
 
       <h2>{{profesor}} controla {{alumnosClase.length}} alumnos</h2>
@@ -11,7 +12,13 @@
                      [alumno]="alumn"
                      [profesor]="profesor"
                      (darNota)="calcularAprobados($event)"
+                     (cambiarNombre)="nombreEjercicio=$event"
+
                   >
           </claseHija>
       </div>
   </div>
+
+
+<app-prueba-padre></app-prueba-padre>
+

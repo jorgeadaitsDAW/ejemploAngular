@@ -29,6 +29,9 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { HttpComponent } from './http/http.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MiTerceraDirectivaDirective } from './mi-tercera-directiva.directive';
+import { PruebaPadreComponent } from './prueba-padre/prueba-padre.component';
+import { PruebaHijoComponent } from './prueba-hijo/prueba-hijo.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,13 @@ import { HttpClientModule } from '@angular/common/http';
         
         ServiciosComponent,
 
-        HttpComponent
+        HttpComponent,
+
+        MiTerceraDirectivaDirective,
+
+        PruebaPadreComponent,
+
+        PruebaHijoComponent
 
   ],
   imports: [

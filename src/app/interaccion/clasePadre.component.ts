@@ -14,6 +14,9 @@ export class ClasePadreComponent{
     alumnosAprobados = 0;
     alumnosSuspendidos = 0;
 
+    nombreEjercicio = "ESTE ES EL NOMBRE DEL EJERCICIO";
+
+
     calcularAprobados(aprobado: boolean) {
         aprobado ? this.alumnosAprobados++ : this.alumnosSuspendidos++;
     }
