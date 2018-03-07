@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Nota} from "../clases/Nota";
+import { Nota } from "./clases/Nota";
 
 @Pipe({
     name: 'prueba',
@@ -7,7 +7,7 @@ import { Nota} from "../clases/Nota";
 })
 export class PruebaPipe implements PipeTransform {
 
-  transform(notas: Nota[],aPartirDe: int) {
+  transform(notas: Nota[],aPartirDe) {
       let resultado = [];
       resultado = notas.filter(nota => nota.valor >= aPartirDe);
       return resultado;
