@@ -1,0 +1,18 @@
+
+<div class="col-12">
+    <h1>{{titulo}}</h1>
+    <h2>El profesor es {{profesor}}</h2>
+    <app-prueba-hijo class="col-12"
+         *ngFor="let alumno of alumnos"
+            [alumnoDeClase]="alumno"
+            [profesorDeAlumnos]="profesor"
+            >
+    </app-prueba-hijo>
+
+</div>
+<p>
+
+
+
+
+</p>
