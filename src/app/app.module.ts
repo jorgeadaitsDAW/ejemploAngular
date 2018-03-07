@@ -23,7 +23,7 @@ import { FiltroNotaPipe } from './pipe/filtroNota.pipe';
 
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormularioBasicoComponent } from './formulario/formularioBasico.component';
-import { FormularioAvanzadoComponent } from './formulario/formularioAVanzado.component';
+import { FormularioAvanzadoComponent } from './formulario/formularioAvanzado.component';
 
 import { ServiciosComponent } from './servicios/servicios.component';
 import { HttpComponent } from './http/http.component';
