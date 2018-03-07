@@ -5,7 +5,7 @@ import { Nota} from "../clases/Nota"
 @Pipe(
     {
         name: 'filtrarNota',
-        //pure: false
+        pure: false
     })
 export class FiltroNotaPipe implements PipeTransform {
     transform(notas: Nota[],aprobadas: boolean) {

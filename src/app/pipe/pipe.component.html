@@ -44,4 +44,16 @@
             </li>
         </ol>
     </div>
+
+    <div class="col-6">
+        <h3> SOLO MUESTRO LAS NOTAS A PARTIR DE 3</h3>
+        <label>VALOR A PARTIR DE:</label>
+        <input type="text" id="valorAPartir" [(ngModel)]="valorAPartirDe" />
+
+        <ol>
+            <li *ngFor="let nota of ( notas | prueba:valorAPartirDe )">
+                HAS SUSPENDIDO LA ASIGNATURA: {{ nota.asignatura }}
+            </li>
+        </ol>
+    </div>
 </div>

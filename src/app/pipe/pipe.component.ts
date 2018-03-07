@@ -12,6 +12,7 @@ export class PipeComponent {
     texto = 'manolo tiene un tambor';
     notas = NOTAS;
     inc_dec = 2;
+    valorAPartirDe = 4;
 
     addNota(asignatura,valor){
         this.notas.push(new Nota(this.notas.length,asignatura,valor));

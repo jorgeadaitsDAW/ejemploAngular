@@ -13,7 +13,7 @@ import { miSegundaClaseDirectiva } from './directivas/miSegundaDirectiva.directi
 import { ClasePadreComponent } from './interaccion/clasePadre.component';
 import { ClaseHijaComponent } from './interaccion/claseHija.component';
 import { NombreAlumnoComponent } from './interaccion/nombreAlumno.component';
-
+    
 import { CicloVidaPadreComponent } from './cicloVida/cicloVidaPadre.component';
 import { CicloVidaHijaComponent } from './cicloVida/cicloVidaHija.component';
 
@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MiTerceraDirectivaDirective } from './mi-tercera-directiva.directive';
 import { PruebaPadreComponent } from './prueba-padre/prueba-padre.component';
 import { PruebaHijoComponent } from './prueba-hijo/prueba-hijo.component';
+import { PruebaPipe } from './prueba.pipe';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,9 @@ import { PruebaHijoComponent } from './prueba-hijo/prueba-hijo.component';
 
         PruebaPadreComponent,
 
-        PruebaHijoComponent
+        PruebaHijoComponent,
+
+        PruebaPipe
 
   ],
   imports: [
