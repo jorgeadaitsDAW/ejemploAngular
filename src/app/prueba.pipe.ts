@@ -7,7 +7,7 @@ import { Nota } from "./clases/Nota";
 })
 export class PruebaPipe implements PipeTransform {
 
-  transform(notas: Nota[],aPartirDe) {
+  transform(notas: Nota[],aPartirDe: Number) {
       let resultado = [];
       resultado = notas.filter(nota => nota.valor >= aPartirDe);
       return resultado;
